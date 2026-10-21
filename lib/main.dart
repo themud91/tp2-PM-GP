@@ -1,5 +1,5 @@
 //imports
-//main v2.0 avec les references vers home_page + styles
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
