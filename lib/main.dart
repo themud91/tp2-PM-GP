@@ -2,8 +2,6 @@
 //main v2.0 avec les references vers home_page + styles
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
     // le widget root
     // avec style, theme et shape
     return MaterialApp(
-      title: 'Répertoire musical',
+      title: 'Dragon Ball',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 87, 43, 165),
@@ -40,7 +38,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomePage(),
+
+      home: const Scaffold(body: Center(child: Text('TP2'))),
     );
   }
 }
