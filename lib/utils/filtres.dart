@@ -14,3 +14,11 @@ List<Personnage> trierPersonnages(List<Personnage> liste, String critere) {
   });
   return copie;
 }
+
+// return Inconnu si le ki est vide ou unknown sinon le txt du json
+String formaterKi(String ki) {
+  if (ki.isEmpty || ki == 'unknown') {
+    return 'Inconnu';
+  }
+  return ki;
+}
