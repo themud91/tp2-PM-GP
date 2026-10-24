@@ -39,8 +39,6 @@ class ListeProvider extends ChangeNotifier {
     charger();
   }
 
-  //methodes pour gerer la derniere recherche
-
   // methode pour charge la premiere page
   // utilise aussi par le bouton Reessayer
   Future<void> charger() async {
