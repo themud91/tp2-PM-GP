@@ -21,6 +21,24 @@ class ParametresPage extends StatelessWidget {
                 value: parametres.themeSombre,
                 onChanged: parametres.changerTheme,
               ),
+
+              // menu deroulant pour choisir le tri.
+              // api.flutter.dev/flutter/material/DropdownButton-class.html
+              ListTile(
+                title: const Text('Tri par défaut'),
+                trailing: DropdownButton<String>(
+                  value: parametres.triParDefaut,
+                  items: const [
+                    DropdownMenuItem(value: 'nom', child: Text('Nom')),
+                    DropdownMenuItem(value: 'race', child: Text('Race')),
+                  ],
+                  onChanged: (valeur) {
+                    if (valeur != null) {
+                      parametres.changerTri(valeur);
+                    }
+                  },
+                ),
+              ),
             ],
           );
         },
