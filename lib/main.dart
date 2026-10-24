@@ -7,7 +7,9 @@ import 'locator.dart';
 import 'providers/parametres_provider.dart';
 
 //import 'providers/favoris_provider.dart';
-//import 'providers/liste_provider.dart';
+import 'providers/liste_provider.dart';
+
+import 'pages/home_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => ParametresProvider()),
         // ChangeNotifierProvider(create: (_) => FavorisProvider()),
-        // ChangeNotifierProvider(create: (_) => ListeProvider()),
+        ChangeNotifierProvider(create: (_) => ListeProvider()),
       ],
       // Consumer ecoute ParametresProvider pour changer le theme en direct
       child: Consumer<ParametresProvider>(
@@ -79,7 +81,8 @@ class MyApp extends StatelessWidget {
                 ? ThemeMode.dark
                 : ThemeMode.light,
 
-            home: const Scaffold(body: Center(child: Text('TP2'))),
+            //new home :)
+            home: const HomePage(),
           );
         },
       ),
