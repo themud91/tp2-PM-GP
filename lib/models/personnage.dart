@@ -13,6 +13,10 @@ class Personnage {
   final String description;
   final String affiliation;
 
+  // champs locals (SQLite) RAPPEL: nuls quand le personnage vient de lapi
+  final String? notePerso;
+  final String? dateAjout;
+
   const Personnage({
     required this.id,
     required this.nom,
@@ -23,6 +27,9 @@ class Personnage {
     required this.maxKi,
     required this.description,
     required this.affiliation,
+
+    this.notePerso,
+    this.dateAjout,
   });
 
   // retourne le texte recu ou la valeur par defaut si c'est nul
@@ -61,6 +68,9 @@ class Personnage {
       'max_ki': maxKi,
       'description': description,
       'affiliation': affiliation,
+
+      'note_perso': notePerso,
+      'date_ajout': dateAjout,
     };
   }
 
@@ -76,6 +86,9 @@ class Personnage {
       maxKi: _texte(map['max_ki'], 'unknown'),
       description: _texte(map['description'], ''),
       affiliation: _texte(map['affiliation'], 'unknown'),
+
+      notePerso: map['note_perso'] as String?,
+      dateAjout: map['date_ajout'] as String?,
     );
   }
 }
