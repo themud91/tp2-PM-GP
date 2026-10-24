@@ -38,10 +38,10 @@ class MyApp extends StatelessWidget {
             // theme clair, meme seedColor
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(
-                seedColor: const Color.fromARGB(255, 87, 43, 165),
+                seedColor: const Color.fromARGB(255, 239, 108, 0),
               ),
               appBarTheme: const AppBarTheme(
-                backgroundColor: Color.fromARGB(255, 87, 43, 165),
+                backgroundColor: Color.fromARGB(255, 239, 108, 0),
                 foregroundColor: Colors.white,
               ),
               elevatedButtonTheme: ElevatedButtonThemeData(
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
 
             darkTheme: ThemeData(
               colorScheme: ColorScheme.fromSeed(
-                seedColor: const Color.fromARGB(255, 87, 43, 165),
+                seedColor: const Color.fromARGB(255, 239, 108, 0),
                 //theme "dark"
                 brightness: Brightness.dark,
               ),
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0),
               appBarTheme: const AppBarTheme(
                 //couleur barre du haut
-                backgroundColor: Color.fromARGB(255, 87, 43, 165),
+                backgroundColor: Color.fromARGB(255, 239, 108, 0),
                 //couleur du texte/icones
                 foregroundColor: Colors.white,
               ),
