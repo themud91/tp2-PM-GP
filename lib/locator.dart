@@ -6,7 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'services/preferences_service.dart';
 import 'services/api_service.dart';
 import 'services/dragon_ball_api_service.dart';
-import 'services/database_service.dart';
+
+//import 'services/database_service.dart';
 
 //pour get les services
 final getIt = GetIt.instance;
@@ -23,5 +24,5 @@ Future<void> setupLocator() async {
   getIt.registerLazySingleton<ApiService>(() => DragonBallApiService());
 
   // la base SQLite s'ouvre seulement quand on en a besoin
-  getIt.registerLazySingleton<DatabaseService>(() => DatabaseService());
+  // getIt.registerLazySingleton<DatabaseService>(() => DatabaseService());
 }

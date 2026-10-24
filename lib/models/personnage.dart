@@ -1,4 +1,4 @@
-// page personnage.dart modele d'un personnage de Dragon Ball
+// class personnage.dart modele d'un personnage de Dragon Ball
 // aucune logique base de donnees ici seulement conversion des donnees
 
 //creationdu class

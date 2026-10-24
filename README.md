@@ -1,4 +1,4 @@
-# TP1 Prog mobile
+# TP2 Prog mobile
 
 ## Thème
 
@@ -35,6 +35,6 @@ Toutes les données sont conservées uniquement en List<Chanson> dans le State d
 
 En plus des exigences de l'énoncé, un bouton de suppression a été ajouté sur chaque élément de la liste (ChansonCard), permettant de retirer une chanson de la collection.
 
-## Dépôt GitHub
+## GitHub
 
 https://github.com/themud91/tp1GP.git

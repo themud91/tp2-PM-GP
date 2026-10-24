@@ -5,8 +5,9 @@ import 'package:provider/provider.dart';
 
 import 'locator.dart';
 import 'providers/parametres_provider.dart';
-import 'providers/favoris_provider.dart';
-import 'providers/liste_provider.dart';
+
+//import 'providers/favoris_provider.dart';
+//import 'providers/liste_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,8 +25,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ParametresProvider()),
-        ChangeNotifierProvider(create: (_) => FavorisProvider()),
-        ChangeNotifierProvider(create: (_) => ListeProvider()),
+        // ChangeNotifierProvider(create: (_) => FavorisProvider()),
+        // ChangeNotifierProvider(create: (_) => ListeProvider()),
       ],
       // Consumer ecoute ParametresProvider pour changer le theme en direct
       child: Consumer<ParametresProvider>(
