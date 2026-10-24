@@ -9,6 +9,9 @@ class PreferencesService {
   static const String _cleTheme = 'theme_sombre';
   static const String _cleTri = 'tri_par_defaut';
 
+  //key pour derniere recherche Home
+  static const String _cleRecherche = 'derniere_recherche';
+
   // lit le theme sauvegarde sinon false (clair) si rien nest encore sauvegarde
   bool lireThemeSombre() {
     final valeur = _prefs.getBool(_cleTheme);
@@ -27,6 +30,15 @@ class PreferencesService {
     return valeur;
   }
 
+  // lit la derniee recherche sauvagarde
+  String lireDerniereRecherche() {
+    final valeur = _prefs.getString(_cleRecherche);
+    if (valeur == null) {
+      return '';
+    }
+    return valeur;
+  }
+
   // sauvegarde le theme
   void ecrireThemeSombre(bool valeur) {
     _prefs.setBool(_cleTheme, valeur);
@@ -35,5 +47,10 @@ class PreferencesService {
   // sauvegarde le tri
   void ecrireTriParDefaut(String valeur) {
     _prefs.setString(_cleTri, valeur);
+  }
+
+  // save la derniere recherche
+  void ecrireDerniereRecherche(String valeur) {
+    _prefs.setString(_cleRecherche, valeur);
   }
 }
